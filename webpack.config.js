@@ -1,5 +1,6 @@
 const path = require("path")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 // entry point to build
 const entry = {
@@ -42,7 +43,13 @@ const modules = {
 
 // plugins
 const plugins = [
-  new CleanWebpackPlugin(["dist"])
+  new CleanWebpackPlugin(["dist"]),
+  new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: "./src/index.html",
+      filename: "index.html"
+  }),
 ]
 
 // resolve
@@ -55,5 +62,6 @@ module.exports = {
   entry: entry,
   output: output,
   module: modules,
-  resolve: resolve
+  resolve: resolve,
+  plugins: plugins
 }
