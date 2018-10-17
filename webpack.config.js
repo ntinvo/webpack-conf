@@ -30,6 +30,12 @@ const modules = {
         "css-loader"
       ]
     },
+    {
+      test: /\.(png|jpg|gif)$/,
+      use: {
+        loader: "file-loader"
+      }
+    }
   ]
 }
 
