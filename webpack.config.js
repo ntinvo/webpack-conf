@@ -27,11 +27,12 @@ const modules = {
       }
     },
     {
-      test: /\.css$/,
+      test: /\.(css|scss)$/,
       use: [
         "style-loader",
         MiniCssExtractPlugin.loader,
-        "css-loader"
+        "css-loader",
+        "sass-loader"
       ]
     },
     {
