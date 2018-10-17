@@ -3,7 +3,12 @@ import "./hello.scss"
 
 class Hello extends React.Component {
   render() {
-    return <h1> 👋 Webpack Configuration Demonstration </h1>
+    return (
+      <div>
+        <h1> 👋 Webpack Configuration Demonstration </h1>
+        <p className="note"> Hover over the images to see the link or a base-64 data-encoded string</p>
+      </div>
+    )
   }
 }
 

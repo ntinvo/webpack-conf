@@ -37,7 +37,7 @@ const modules = {
       ]
     },
     {
-      test: /\.(png|jpg|jpeg|gif)$/,
+      test: /\.(ico|png|jpg|jpeg|gif)$/,
       use: {
         loader: "file-loader",
         options: {

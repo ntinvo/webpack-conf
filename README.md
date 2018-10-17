@@ -56,6 +56,10 @@ Webpack Configuration that can handle different file types.
 * [Webpack](https://webpack.js.org/) - an open-source JavaScript module bundler.
 * [React](https://reactjs.org/) - a JavaScript library for building user interfaces.
 
+## Images Resource ⬇️
+
+* [Lovesvg](https://lovesvg.com/) - a free svg resources for crafters.
+* [Iconarchive](http://www.iconarchive.com) - a professional tag based icon search engine with more than 600,000 icons for web developers, end users and graphic artists.
 
 ## Authors 🐶
 
