@@ -1,0 +1,22 @@
+{
+  "name": "webpack-conf",
+  "version": "1.0.0",
+  "description": "webpack configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinnvo/webpack-conf.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Tin Vo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinnvo/webpack-conf/issues"
+  },
+  "homepage": "https://github.com/tinnvo/webpack-conf#readme"
+}
