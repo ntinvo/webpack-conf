@@ -1,1 +1,2 @@
-console.log('init');
+import "./style.css"
+console.log("init");
