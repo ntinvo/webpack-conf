@@ -51,7 +51,8 @@ const modules = {
         loader: "url-loader",
         options: {
           limit: 1000000,
-          fallback: "file-loader?./images/[name].[hash].[ext]"
+          fallback: "file-loader",
+          name: "./images/[name].[hash].[ext]"
         }
       }
     }
