@@ -1,6 +1,5 @@
 const path = require("path")
 
-
 // entry point to build
 const entry = {
   main: [
@@ -18,7 +17,7 @@ const output = {
 const modules = {
   rules: [
     {
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: {
         loader: "babel-loader"
@@ -27,10 +26,15 @@ const modules = {
   ]
 }
 
+// resolve
+const resolve = {
+  extensions: ["*", ".js", ".jsx"]
+}
 
 // export
 module.exports = {
   entry: entry,
   output: output,
-  module: modules
+  module: modules,
+  resolve: resolve
 }
