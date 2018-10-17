@@ -13,7 +13,7 @@ const entry = {
 // output file
 const output = {
   path: path.resolve(__dirname, "dist"),
-  filename: "[name].[chunkhash].js"
+  filename: "./js/[name].[chunkhash].js"
 }
 
 // modules
@@ -54,7 +54,7 @@ const plugins = [
     filename: "index.html"
   }),
   new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css",
+      filename: "./css/style.[contenthash].css",
   }),
 ]
 
