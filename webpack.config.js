@@ -1,3 +1,4 @@
+// import
 const path = require("path")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -10,13 +11,13 @@ const entry = {
   ]
 }
 
-// output file
+// output file to the result dist directory
 const output = {
   path: path.resolve(__dirname, "dist"),
   filename: "./js/[name].[chunkhash].js"
 }
 
-// modules
+// modules to handle different file types
 const modules = {
   rules: [
     {
@@ -36,9 +37,22 @@ const modules = {
       ]
     },
     {
-      test: /\.(png|jpg|gif)$/,
+      test: /\.(png|jpg|jpeg|gif)$/,
       use: {
-        loader: "file-loader"
+        loader: "file-loader",
+        options: {
+          name: "./images/[name].[hash].[ext]"
+        }
+      }
+    },
+    {
+      test: /\.svg$/,
+      use: {
+        loader: "url-loader",
+        options: {
+          limit: 1000000,
+          fallback: "file-loader?./images/[name].[hash].[ext]"
+        }
       }
     }
   ]
