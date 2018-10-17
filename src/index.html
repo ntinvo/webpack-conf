@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
   <title>Webpack configuration</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
-  <script src="./main.js"></script>
+  <script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 const path = require("path")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 // entry point to build
 const entry = {
@@ -12,7 +13,7 @@ const entry = {
 // output file
 const output = {
   path: path.resolve(__dirname, "dist"),
-  filename: "main.js"
+  filename: "[name].[chunkhash].js"
 }
 
 // modules
@@ -29,6 +30,7 @@ const modules = {
       test: /\.css$/,
       use: [
         "style-loader",
+        MiniCssExtractPlugin.loader,
         "css-loader"
       ]
     },
@@ -45,10 +47,13 @@ const modules = {
 const plugins = [
   new CleanWebpackPlugin(["dist"]),
   new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: "./src/index.html",
-      filename: "index.html"
+    inject: false,
+    hash: true,
+    template: "./src/index.html",
+    filename: "index.html"
+  }),
+  new MiniCssExtractPlugin({
+      filename: "style.[contenthash].css",
   }),
 ]
 
