@@ -84,5 +84,6 @@ module.exports = {
   output: output,
   module: modules,
   resolve: resolve,
-  plugins: plugins
+  plugins: plugins,
+  devtool: "inline-source-map"
 }
