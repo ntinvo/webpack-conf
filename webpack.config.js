@@ -1,4 +1,5 @@
 const path = require("path")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 
 // entry point to build
 const entry = {
@@ -38,6 +39,11 @@ const modules = {
     }
   ]
 }
+
+// plugins
+const plugins = [
+  new CleanWebpackPlugin(["dist"])
+]
 
 // resolve
 const resolve = {
